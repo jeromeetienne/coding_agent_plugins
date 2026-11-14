@@ -1,6 +1,6 @@
 # Symbiospec format definitions
 
-Use [version detection and migration](versioning.md) before normal Symbiospec work. The required format for normal work is the latest published entry below, currently `2.0.0`. Retained older definitions support migration sources, not ordinary work on older data. Follow the shared procedure to migrate automatically before normal work. Skill release versions are independent of project format versions.
+Use [version detection and migration](versioning.md) before normal Symbiospec work. The required format for normal work is the latest published entry below, currently `2.0.0`. Retained older definitions support migration sources, not ordinary work on older data. Follow the shared procedure to migrate automatically before normal work. Migration completion follows the shared removal rule: obsolete project paths are removed after preservation and known-reference checks, without redirects or compatibility pages; uneditable external references are reported limitations. This rule governs conversion completion, not a new project-data layout. Skill release versions are independent of project format versions.
 
 Keep one complete definition per published version, named `format-<MAJOR.MINOR.PATCH>.md`. Add each future version to the ordered list below, linking its definition and instructions for the transition from the preceding published version. Keep older definitions available; do not rewrite an old definition to describe a newer format. Publish corrections as patch versions.
 
