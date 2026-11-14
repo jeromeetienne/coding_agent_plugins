@@ -6,7 +6,7 @@ The [skill instructions](SKILL.md) propose screens and navigation from approved 
 
 The receiving project needs an approved Symbiospec for the selected scope. Missing decisions remain explicit. No visual framework or prototype tool is required.
 
-The expected Symbiospec format is `2.0.0`; `1.0.0` and its unversioned equivalent remain supported. Use the detected format without silently converting source data. The shared [version check](../symbio_spec/references/versioning.md) runs before proposals; unsupported or malformed versions and incomplete migrations stop normal work. A proposal request does not authorize source migration.
+Normal work requires the latest published Symbiospec format in the installed registry, currently `2.0.0`. The shared [version check and automatic migration procedure](../symbio_spec/references/versioning.md) runs first. Invoking this skill includes authorization to adopt unversioned data and migrate older formats with verified preservation, without a separate migration request. Explicit instructions forbidding changes block required migration and dependent work. Malformed, unknown or newer versions and failed or interrupted migrations stop normal work. Product approval and implementation permissions remain separate from storage conversion.
 
 Example request:
 

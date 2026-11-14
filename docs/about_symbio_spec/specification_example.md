@@ -49,7 +49,7 @@ docs/symbio_spec/
   system_overview/note_editor.md
 ```
 
-This example uses Symbiospec format `2.0.0`. The decision record and summary shown above would exist only after an actual human decision; initialization does not fabricate either record. Existing `1.0.0` projects remain valid with their single decision file until migration is authorized. See the [current decision format](../../skills/symbio_spec/references/format-v2.0.0.md#42-decisions) and [migration procedure](../../skills/symbio_spec/references/migration-1-to-2.md).
+This example uses Symbiospec format `2.0.0`. The decision record and summary shown above would exist only after an actual human decision; initialization does not fabricate either record. Invoking a Symbiospec skill automatically migrates existing `1.0.0` projects to the latest installed published format before normal work, preserving decisions and approval evidence. No separate migration request is needed. See the [current decision format](../../skills/symbio_spec/references/format-v2.0.0.md#42-decisions) and [migration procedure](../../skills/symbio_spec/references/migration-1-to-2.md).
 
 Each of the six area folders also has its own README.md and index.md. Create topic files only when useful content exists, and register each file in the owning index. The area README explains contents, exclusions and references. Register `symbio_spec/index.md` in the receiving project's documentation index during authorized initialization.
 
