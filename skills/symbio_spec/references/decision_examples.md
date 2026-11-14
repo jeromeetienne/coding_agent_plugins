@@ -22,7 +22,7 @@ Create a valid `1.0.0` folder with the six specification areas, overviews, index
 | 4 | 14 November 2026 | navigation, permissions | Approve showing only readable workspaces in navigation; defer any change to editing permissions. |
 | 5 | 14 November 2026 | permissions | Reject automatic editing access for guests. |
 
-Make scope, sources, approval evidence and affected references explicit, without treating a deferral, partial approval, or rejection as general approval. Add a preamble, uneven heading levels, two decisions on the same date, one legacy alias, inter-record notes, a condition after a nested heading, and a trailing note. Include a relative approval link, an old heading anchor referenced by the specification and an external repository file, and an unaffected file with local changes. Include a separate empty-history case. Exercise both LF and CRLF line endings and a final block with no terminal newline.
+Make scope, sources, approval evidence and affected references explicit, without treating a deferral, partial approval, or rejection as general approval. Add a preamble, uneven heading levels, two decisions on the same date, one legacy alias, inter-record notes, a condition after a nested heading, and a trailing note. Include a relative approval link, an old heading anchor referenced by the specification and an external repository file, and an unaffected file with local changes. Include an uneditable external bookmark to the old history in a separate fixture outside the repository. Keep that bookmark unchanged and report its broken destination as a limitation after removal; do not retain a page to serve it. Include a separate empty-history case. Exercise both LF and CRLF line endings and a final block with no terminal newline.
 
 ## 2. Retrieve relevant evidence
 
@@ -43,9 +43,9 @@ Interrupt once before refreshing the summary. A checkpoint mismatch or `Needs up
 
 ## 4. Migration, reverse conversion and failure cases
 
-Follow the production transition on a disposable copy of section 1's history. Verify one output record per source decision, original byte ranges covering the complete source, sequence independent of dates, preserved aliases, exact original-block checksums, all non-decision text, correct `undated/` placement, approval and replacement semantics, summary freshness, updated references and unchanged unrelated local files. Verify an empty history without fabricated decisions.
+Follow the production transition on a disposable copy of section 1's history. Verify one output record per source decision, original byte ranges covering the complete source, sequence independent of dates, preserved aliases, exact original-block checksums, all non-decision text, correct `undated/` placement, approval and replacement semantics, summary freshness, updated references and unchanged unrelated local files. Verify that the old `decisions.md` path is completely absent, not a symbolic link, redirect, compatibility page or navigation-only file. Verify every known repository reference against the new paths and anchors, while preserving quoted original text and administrative mapping evidence without treating their historical paths as live links. Confirm that the uneditable external bookmark is reported as a limitation and does not prevent removing the old path. Verify an empty history without fabricated decisions or an obsolete history file.
 
-Immediately reverse on a separate copy and compare every recovered path and byte against the complete original snapshot, including the external reference file. Do not equate matching record counts with complete preservation. After adding decision 6, demonstrate that exact restoration refuses to overwrite later work; exercise the normalized reverse conversion, preserving all six records, partial approval, rejection and deferral history, conditions, evidence links and current topic meaning.
+Immediately reverse on a separate copy and compare every recovered path and byte against the complete original snapshot, including the updated reference file elsewhere in the repository. The uneditable external bookmark remains unchanged throughout; no old-path page is restored in the active migrated fixture. Reverse conversion restores the source history only on the separate verification copy. Do not equate matching record counts with complete preservation. After adding decision 6, demonstrate that exact restoration refuses to overwrite later work; exercise the normalized reverse conversion, preserving all six records, partial approval, rejection and deferral history, conditions, evidence links and current topic meaning.
 
 Reject duplicate decision numbers, ambiguous decision boundaries, colliding destinations, corrupted original blocks and unrepresentable custom content without completing a conversion. Stop rather than discard data. Interrupt before output completion and after version replacement; the migration marker must still block normal work. Verify recovery against the complete source snapshot, retaining unrelated edits and removing the marker last. Use the shared [versioning examples](versioning_examples.md) for malformed records and unsupported versions.
 
@@ -70,3 +70,18 @@ CRLF: normalized reverse: 6 records, evidence links and approval anchors preserv
 ```
 
 The temporary exercise is verification evidence for the instructions, not a shipped migration tool. No receiving project was migrated. Use the exercises above to verify any real conversion against that project's actual source data.
+
+
+### 5.2. Obsolete-path removal exercise for issue 105
+
+On 15 November 2026, a disposable procedure exercise converted the five-decision fictional history with LF and CRLF source bytes. Both variants removed the old history completely, updated and resolved a known repository reference outside the Symbiospec folder, preserved the fictional uneditable external bookmark unchanged, and recorded the obsolete external destination as a limitation. The old path was not retained for that bookmark. Negative completion checks detected both a deliberately reintroduced navigation-only page and a dangling symbolic link at the old history path; both were removed from the disposable migrated fixture.
+
+Original decision block checksums, order, approval and condition text, unrelated local bytes, and exact reverse restoration on a separate copy still passed. The migrated fixture remained without the obsolete path during reverse verification. The external bookmark was fictional, and source decision boundaries were explicitly mapped rather than automatically inferred. No receiving project was changed, and this was not an independent agent run or a shipped converter test.
+
+Actual output included:
+
+```text
+LF: obsolete history absent; known repository reference resolves; uneditable external bookmark reported; old-path page and dangling symlink detected; original blocks and exact reverse restoration checked
+CRLF: obsolete history absent; known repository reference resolves; uneditable external bookmark reported; old-path page and dangling symlink detected; original blocks and exact reverse restoration checked
+PASS: 334 assertions.
+```
