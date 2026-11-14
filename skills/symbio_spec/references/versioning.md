@@ -6,13 +6,13 @@
 
 Use one Markdown record for the whole folder and one retained definition per published version.
 
-### 0.2. Check compatibility
+### 0.2. Require the latest format
 
-Detect unversioned data, unsupported versions, malformed records, and interrupted migrations before normal work.
+Detect the project format and automatically migrate older data to the latest published format before normal work. Reject malformed or unknown versions and interrupted migrations.
 
 ### 0.3. Convert and recover
 
-Apply authorized consecutive migrations with preservation checks, verified completion, and recovery evidence.
+Apply consecutive migrations as part of invoking the skill, with preservation checks, verified completion, and recovery evidence. An explicit instruction forbidding changes blocks migration and dependent work.
 
 ## 1. Version record and definitions
 
@@ -42,22 +42,25 @@ A new requirement that invalidates an existing valid folder requires a major ver
 
 ## 2. Check before normal work
 
-Every Symbiospec skill declares its expected format and supported formats in its entry point and follows this procedure, including skills that only read specifications. Currently `symbio_spec`, `symbio_spec_to_docs`, and `symbio_spec_to_ux` expect `2.0.0` and support both `2.0.0` and `1.0.0`, including the unversioned `1.0.0` equivalent. Use the detected version's complete definition. Supporting `1.0.0` permits ordinary work in that format without forcing migration. The [1.0.0 to 2.0.0 transition](migration-1-to-2.md) is available only within migration authorization. New releases update these declarations together with the registry and definitions.
+Every Symbiospec skill follows this procedure before normal work, including workflows that otherwise only read specifications. `symbio_spec`, `symbio_spec_to_docs`, and `symbio_spec_to_ux` use the latest published format in the installed [registry](format.md): the last entry in its ordered transition list, currently `2.0.0`. Older retained definitions, including `1.0.0` and its unversioned equivalent, are supported as migration sources, not as formats for normal work. Select the target from the registry each time; do not hard-code `2.0.0` as the permanent target. A newer installed release updates the registry, definitions, transitions and entry-point declarations together. Missing definitions, transitions or inconsistent declarations block work; never invent a path or infer compatibility from a version number.
+
+Invoking any of these skills authorizes the documented format adoption and forward migrations needed to reach that target, without separate migration approval. Announce the source, target and conversion steps, then complete the shared preservation procedure before the requested workflow. This authorization covers storage conversion and necessary reference updates, not changes to approved product meaning, application implementation, documentation audience, or publication. An audit, documentation request or interface proposal does not exempt older data from migration. An explicit instruction such as "do not change files" or "do not migrate" overrides this default: if conversion is needed, report the conflict and stop dependent normal work without modifying data or silently using the older format.
 
 At the beginning of setup and before any normal initialization, update, audit, Realignment, documentation generation, or interface proposal:
 
 1. Read repository instructions. Check for `docs/symbio_spec/.format-migration.md` before consuming specification content. If present or unreadable, stop normal work and report an incomplete migration. Read only what is needed to diagnose or recover the migration under section 5.
 2. If the Symbiospec folder does not exist, report that initialization is needed; create the expected format and version record only within authorized initialization. A read-only request does not authorize initialization.
-3. If the folder exists but `format-version.md` is absent, report `unversioned (effective format 1.0.0)` and follow section 3. Do not require an extra format-recognition investigation to assign this version.
+3. If the folder exists but `format-version.md` is absent, report `unversioned (effective format 1.0.0)`. Plan the complete path to the latest target before writing. If the path is available and changes are not explicitly forbidden, perform section 3's metadata-only adoption, verify the unchanged existing files, then continue directly through the required migrations. Adoption alone does not satisfy readiness. Do not require an extra format-recognition investigation to assign this source version.
 4. Otherwise parse the record using section 1. Stop on a malformed or unreadable record without modifying project data. Report the problem and the expected format; do not replace the record with a guess.
-5. Compare the recorded version with the invoking skill's declared supported formats and the installed registry. Proceed only for a supported published format, using that format's definition. A different number alone does not require migration: future skills may explicitly support compatible versions. Never infer support for an unknown version merely from a matching major number. An older skill must stop on a newer major version.
-6. For an unsupported version, report the project version, expected version, and reason. Propose an available migration path before normal work; if no reliable path exists, explain the missing definition or conversion and leave data unchanged. Do not fall back to an older installed format silently.
+5. Compare the project version with the latest target from the installed registry. If the versions match, proceed using that complete definition without rewriting metadata or migrating again. If the project is an older registered migration source, complete every published forward transition automatically under section 4 before normal work, even if the old format is compatible or previously supported. This includes a version-record-only transition when the published instructions require no content conversion.
+6. If the project version is unknown, newer than the installed target, or has no complete reliable forward path, report the source, target and exact missing definition or conversion. Stop dependent work without mutation or downgrade. An explicit no-changes instruction likewise leaves the source unchanged and blocks dependent work when conversion is needed. Failed or interrupted conversion never permits fallback to normal work on the older format.
+7. After adoption and each migration step, verify the saved format and preservation checks. Before beginning the requested workflow, confirm the project now uses the latest target, all required references are updated, and no interruption marker remains. Report source and target versions, completed steps, actual verification and unresolved blockers. Current installed skill files alone do not establish that project data is ready.
 
 Installation that only copies skill files performs no project mutation. Run this check on first project use. Companion skills use their actual installed `symbio_spec` location; if its definitions or shared procedure are unavailable, stop rather than proceeding with another format.
 
 ## 3. Unversioned adoption
 
-Explain that the existing unversioned format is `1.0.0` and propose adding the Markdown record. Read-only work may use the unversioned equivalent without writing metadata. For a writing workflow, establish the record before normal specification changes; use existing authorization for adoption, otherwise obtain that authorization. Declined adoption leaves all files unchanged and permits only supported read-only work.
+Explain that the existing unversioned format is `1.0.0` and add the Markdown record automatically as the first verified step toward the latest target. Invocation supplies adoption authorization even for an audit or another workflow that otherwise only reads specifications. Do not request separate approval or continue normal work using the unversioned equivalent. If an explicit user instruction forbids changes, or the complete forward path is unavailable, leave files unchanged and stop dependent work with the precise reason.
 
 Inventory every existing file and its bytes, including decision history, approval evidence, coverage, indexes, and any local changes. Add only `format-version.md`, following document metadata conventions. Verify that every pre-existing path and its bytes are unchanged and that the new record parses as supported `1.0.0`. No approval of product meaning or completeness follows from adoption.
 
@@ -65,9 +68,9 @@ This metadata-only adoption deliberately does not edit an existing index. During
 
 ## 4. Prepare and apply migration
 
-A format mismatch is not authorization to convert data. Use existing migration authorization; otherwise present the source, target, ordered steps, affected files and references, preservation checks, reverse limitations, and recovery plan for approval. If declined or no reliable path is available, leave the data unchanged and explain why normal work cannot proceed.
+Invocation supplies authorization for the documented forward path to the latest published installed format. Present the source, target, ordered steps, affected files and references, preservation checks, reverse limitations and recovery plan as a progress update, then perform the migration without a separate approval request. Explicit instructions forbidding changes take precedence. If the required path, preservation checks or permissions are unavailable, stop dependent work and report the exact blocker rather than skipping conversion or weakening checks. This automatic policy never authorizes a guessed conversion or changed product meaning.
 
-Follow the published transitions consecutively in either direction. For example, reaching a third published format from the first requires the first-to-second step and then the second-to-third step, each verified separately. Do not skip intermediate definitions. The first publication has no earlier version to convert; unversioned adoption is section 3.
+Follow the published transitions consecutively. Normal skill use always moves forward to the latest target. Reverse conversion is used only for verification on a separate copy or explicitly requested restoration, never as an automatic fallback; a later normal invocation again requires the latest format. For example, reaching a third published format from the first requires the first-to-second step and then the second-to-third step, each verified separately. Do not skip intermediate definitions. The first publication has no earlier version to convert; unversioned adoption is section 3.
 
 For each step:
 
@@ -87,6 +90,6 @@ The presence of `.format-migration.md` is the interruption signal, regardless of
 
 Read the migration record, source snapshot, current files, and conversion instructions. Preserve the interrupted state separately. Identify any edits made since conversion began; never overwrite unrelated edits with a backup. If the state or preservation cannot be established, stop and explain what is needed.
 
-Within recovery authorization, either resume the documented step and run all target verification, or restore the complete source snapshot and affected external files. Verify restoration against the source inventory and bytes, including the source version record or its original absence. Remove the migration record only after verified completion or restoration. Report the outcome before normal work or another migration starts.
+Invocation includes recovery of its documented format migration when the preserved state and recovery path are reliable and changes are not explicitly forbidden. Announce recovery, then either resume the documented step and run all target verification, or restore the complete source snapshot and affected external files. Unknown state or unrelated edits that cannot be safely retained block recovery. Restoring an older source does not permit normal work until the required forward migration has succeeded. Verify restoration against the source inventory and bytes, including the source version record or its original absence. Remove the migration record only after verified completion or restoration. Report the outcome before normal work or another migration starts.
 
 See [worked verification examples](versioning_examples.md) for adoption, rejected records, sequential conversions, reverse limitations, and interruption recovery. The examples are isolated exercises, not additional published formats or a migration tool.

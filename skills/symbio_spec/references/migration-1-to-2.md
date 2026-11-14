@@ -8,7 +8,7 @@ For coding agents converting an authorized project's complete Symbiospec folder 
 
 ### 0.2. Preservation
 
-Preserve original text, sequence, scope, evidence and uncertainty. Test reverse conversion on a separate copy before completing a forward migration. Installation or a supported `1.0.0` folder does not authorize migration.
+Preserve original text, sequence, scope, evidence and uncertainty. Test reverse conversion on a separate copy before completing a forward migration. Invoking a Symbiospec skill automatically authorizes this published forward conversion under the shared procedure. Installation alone still changes no project data. Explicit instructions forbidding changes block conversion and dependent normal work.
 
 ### 0.3. Recovery
 
@@ -32,7 +32,7 @@ The mapping and retained non-decision text are not approval evidence. If source 
 
 ## 2. Forward conversion: 1.0.0 to 2.0.0
 
-1. Obtain conversion authorization, complete the mapping and verified snapshot, stop competing writers, and create `.format-migration.md` before changing source input. Resolve destination collisions rather than overwriting local files. Keep the `1.0.0` version record until verification succeeds.
+1. Use the invoking skill's automatic forward-migration authorization unless changes are explicitly forbidden; announce the conversion, complete the mapping and verified snapshot, stop competing writers, and create `.format-migration.md` before changing source input. Resolve destination collisions rather than overwriting local files. Keep the `1.0.0` version record until verification succeeds.
 2. Create `decisions/`, `summaries/`, required date folders and `undated/` only where needed, with overviews and indexes. Even an empty source history creates the decision and summary overviews and indexes plus the migration mapping, but no invented decision. An empty `decisions.md` with an explicit no-decisions statement is retained as non-decision text in the mapping.
 3. Write each original decision as a `2.0.0` record with required metadata and sections. Populate fields only from actual recorded facts. Label missing facts `Unknown — not recorded`; a migration does not create human approval. Preserve the entire original source block byte for byte in a final `## 5. Original record` section, inside a code fence longer than any fence in the source. The mapping supplies exact byte length and checksum; delimiter newlines are not part of the original bytes. Original relative links inside this historical quotation retain their original text. Make usable links in the structured fields, resolved from the original history location to the new record location; do not silently rewrite the preserved block. The original block is part of this decision's record, not a competing history.
 4. Build summary topics from affected specifications, concepts and explicit relationships, including cross-topic replacements and unresolved conditions. Route uncertain classification to `unclassified`. Mark topics `Needs update`, produce summaries from their original records, store the topic checkpoints and record checksums, then mark verified topics `Current`. Preserve unknown or conflicting approval as unknown or conflicting. Topic documents continue to state current requirements; migration changes storage and links, not product meaning.

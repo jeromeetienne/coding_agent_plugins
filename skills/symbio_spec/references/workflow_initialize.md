@@ -1,14 +1,14 @@
 # Initialize Symbiospec
 
-Before setup, follow [version detection and migration](versioning.md). Existing unversioned folders use format `1.0.0`; establish the record under the adoption rules without changing existing content. Unsupported formats or an incomplete migration must be resolved before initialization continues.
+Before setup, follow [version detection and migration](versioning.md). Existing unversioned folders start at effective format `1.0.0`; automatically adopt the version record without changing existing content during that step, then complete the forward path to the latest installed published format before initialization continues. Unsupported formats or an incomplete migration must be resolved before initialization continues.
 
 ## 1. New software
 
-Read [format.md](format.md), repository instructions, and existing documentation. Create the agreed structure at `docs/symbio_spec/`, including `format-version.md` with version `2.0.0`, folder contracts in the overviews, and accurate navigation in the indexes. Include the version record in the initial root index. Initialize `decisions/` and `decisions/summaries/` with overviews and indexes that honestly state that no decisions have been recorded. Start `coverage.md` with an honest, empty initial record. Create dated decision folders and topic summaries only when useful records exist. Do not invent product concepts or approvals to fill the folders.
+Read [format.md](format.md), repository instructions, and existing documentation. Create the agreed structure at `docs/symbio_spec/`, including `format-version.md` with the latest published version from the installed registry (currently `2.0.0`), folder contracts in the overviews, and accurate navigation in the indexes. Include the version record in the initial root index. Initialize `decisions/` and `decisions/summaries/` with overviews and indexes that honestly state that no decisions have been recorded. Start `coverage.md` with an honest, empty initial record. Create dated decision folders and topic summaries only when useful records exist. Do not invent product concepts or approvals to fill the folders.
 
 Add the repository instruction pointer described in the format reference during authorized setup. Then use Update as the first concepts and capabilities are developed. Product decisions already supplied by the human can populate the specification within their actual scope.
 
-Existing supported `1.0.0` folders retain their original decision file and conventions unless migration is authorized. For new Symbiospec folders in existing software, use `2.0.0`; do not treat adoption of version metadata as authorization for storage migration.
+Existing `1.0.0` folders are automatically migrated before normal initialization work; invocation authorizes the published conversion, not new product decisions. New Symbiospec folders in existing software use the latest installed published format directly. An explicit no-changes instruction blocks required migration and dependent initialization rather than permitting the older layout.
 
 ## 2. Existing software: slow growth
 

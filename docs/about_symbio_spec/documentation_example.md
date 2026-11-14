@@ -35,7 +35,7 @@ Assume these receiving-project sources exist and can be read:
 | `docs/symbio_spec/user_interface/note_editor.md` | Approved editor entry point and Save placement. |
 | `src/note_editor/` and `tests/note_editor/` | Current implementation and relevant test expectations; inspecting tests does not execute tests. |
 
-These example source locations use format `2.0.0`. A supported `1.0.0` project still uses its single decision file; documentation generation does not authorize migration. See the [decision reading procedure](../../skills/symbio_spec/references/format-v2.0.0.md#423-reading-procedure).
+These example source locations use format `2.0.0`. When invoked on a `1.0.0` project, the documentation skill automatically migrates the source format before generation, preserving decisions and approval evidence. Explicit instructions forbidding changes block required migration and generation. See the [decision reading procedure](../../skills/symbio_spec/references/format-v2.0.0.md#423-reading-procedure).
 
 No page should claim autosave merely because autosave was approved for future implementation. No page should describe an implemented sharing feature if approved Symbiospec does not cover sharing. Both gaps belong in the review record when relevant to the requested scope.
 

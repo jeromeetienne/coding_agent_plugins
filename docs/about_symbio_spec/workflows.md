@@ -27,7 +27,7 @@ Initialize starts Symbiospec in a project.
 
 - New software: the coding agent creates the folder structure. The empty templates are not approved definitions. Then the project starts to use update.
 - Existing software: the coding agent uses slow growth. The coding agent finds a few clear concepts, the human approves the concepts, and the coding agent documents a small part of the product around the concepts. Then the cycle starts again with the next concepts. The existing code is evidence, but the existing code is not automatically the intended behaviour.
-- Existing specification: the coding agent keeps the content and the approvals that exist, and proposes a migration in small steps.
+- Existing specification from another system: the coding agent keeps the content and approvals, and proposes content adoption in small steps. Existing Symbiospec folders first undergo the shared [automatic format migration](../../skills/symbio_spec/references/versioning.md) to the latest installed published format, without a separate migration request.
 
 Slow growth is necessary because an incorrect concept makes errors in all the descriptions that use the concept. Small reviewed steps stop these errors early.
 
