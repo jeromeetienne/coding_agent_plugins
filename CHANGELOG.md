@@ -11,7 +11,7 @@ The repository no longer includes its GitHub Pages website configuration.
 
 ### Removed
 
-- Remove the Jekyll and GitHub Pages configuration from the repository. [Commit](https://github.com/jeromeetienne/coding_agent_plugins/commit/19a86fbf02b3d8c46d7d131de3f72f5d3bf1ee6f)
+- Remove the Jekyll and GitHub Pages configuration from the repository. [Commit](https://github.com/jeromeetienne/coding_agent_plugins/commit/493f4ba6c2481719bc18444c7c25ccc7b310d344)
 
 ## [0.5.0] - 2026-11-15
 
