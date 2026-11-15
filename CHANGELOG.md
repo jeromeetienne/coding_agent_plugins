@@ -7,7 +7,18 @@ The format follows [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/
 
 ### Release notes
 
+Issue Fix Review now requires explicit approval before committing the reviewed changes, creating and merging the pull request, and closing the issue. Reusable skills must contain Markdown files only, with executable tools maintained in separate repositories. The repository also adds an installed copy of Pull Request Creation for preparing clear titles and descriptions from the complete change and actual validation.
+
 The repository no longer includes its GitHub Pages website configuration.
+
+### Added
+
+- Add an installed copy of `pull_request_creation`, with guidance for describing the complete change, reporting validation accurately, and respecting the receiving repository's review and publication workflow. [Commit](https://github.com/jeromeetienne/coding_agent_plugins/commit/6a30bdeb1061110c5016edb909f4597580614b77)
+
+### Changed
+
+- Require explicit approval for Issue Fix Completion after explaining the commit, pull request, merge, and issue-closing actions; update the installed Issue Fix Workflow copy to match. [Pull request 112](https://github.com/jeromeetienne/coding_agent_plugins/pull/112), [commit](https://github.com/jeromeetienne/coding_agent_plugins/commit/6a30bdeb1061110c5016edb909f4597580614b77)
+- Require Markdown files only throughout `skills/`, including subfolders; keep executable tools in separate repositories and link to those tools from the instructions. [Pull request 110](https://github.com/jeromeetienne/coding_agent_plugins/pull/110)
 
 ### Removed
 
