@@ -1,7 +1,7 @@
 # How the skills work together
 
 - Created: 9 November 2026
-- Last updated: 14 November 2026
+- Last updated: 15 November 2026
 - Status: Maintained guide for people
 - Related framing: [Documentation conventions](../contributing/maintaining_skills.md)
 - Related rules: [Docs folder system](../../skills/docs_folder_system/SKILL.md)
@@ -14,6 +14,7 @@ Install the skills needed for the work rather than assuming the whole collection
 | Goal | Start with | Add when needed |
 | --- | --- | --- |
 | Record a problem or request | [Issue Creation](../../skills/issue_creation/README.md) | Issue Fix Workflow when ready to implement |
+| Prepare or revise a pull request | [Pull Request Creation](../../skills/pull_request_creation/README.md) | The receiving repository's review and publication workflow; Issue Creation for authorized issue writing |
 | Fix one issue with human review | [Issue Fix Workflow](../../skills/issue_fix_workflow/README.md) | Applicable repository rule skills |
 | Implement an agreed group of related issues | [Issue Batch Workflow](../../skills/issue_batch_workflow/README.md) | Required Issue Fix Workflow and Issue Creation |
 | Apply the right repository rules before a change | [The Rules of the Repo](../../skills/rules_of_the_repo/README.md) | The individual rule skills selected in the project's rules list |
@@ -44,6 +45,7 @@ Symbiospec to documentation
 
 Symbiospec -- optional --> Issue Batch Workflow for implementation issues
 Issue Fix Workflow -- optional --> Keep a Changelog Workflow
+Issue Fix Workflow or Issue Batch Workflow -- optional --> Pull Request Creation at publication
 Completed development -- optional --> Git Cleanup Review
 ```
 
@@ -102,6 +104,7 @@ Required inputs below come from current instructions. Optional relationships are
 | `issue_fix_workflow` | Complete Issue Fix Workflow values in receiving AGENTS.md; Git worktrees and configured issue-tracker/check capabilities. | issue_creation applies to issue comments; relevant project rules/specifications apply. Developer acceptance precedes completion. |
 | `issue_batch_workflow` | issue_fix_workflow and issue_creation; same configured values; parent/sub-issues, helper agents and worktrees. | Project specifications such as symbio_spec when applicable. Recorded initial decisions govern subsequent batch completion. |
 | `issue_creation` | Installed, authenticated gh or glab and target-project access; attachment files when used. | No configuration file or companion skill required; called by issue workflows and other authorized issue-writing tasks. |
+| `pull_request_creation` | Complete intended change, repository instructions and templates, relevant issues, and actual validation evidence; authenticated repository tool and access for remote publication. | No configuration file or companion skill required. Complements issue_creation; issue_fix_workflow and issue_batch_workflow can use the writing guidance at their permitted publication stage. Existing review and publication requirements remain in force. |
 | `git_cleanup_review` | Readable Git history, branches/worktrees, repository instructions and identified destination; report missing evidence. | Remote access supports live checks. No configuration file or companion skill; removal needs a separate request. |
 | `context_md_system` | Repository files and parent context files; no configuration file required. | Complements repo_folders_constraints; can be registered in rules_of_the_repo. |
 | `docs_folder_system` | Supplied documentation-folder and metadata-exception values through configuration or AGENTS.md. | Independent or called through rules_of_the_repo; other documentation skills follow it when required. |
