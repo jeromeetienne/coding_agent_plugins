@@ -1,11 +1,35 @@
 # Publish and maintain the documentation
 
 - Created: 9 November 2026
-- Last updated: 14 November 2026
+- Last updated: 15 November 2026
 - Status: Maintained publication guide
 - Related framing: [Documentation conventions](maintaining_skills.md)
 - Related rules: [Docs folder system](../../skills/docs_folder_system/SKILL.md)
 - Related issue: [Issue 53](https://github.com/jeromeetienne/coding_agent_plugin/issues/53), part of [Issue 37](https://github.com/jeromeetienne/coding_agent_plugin/issues/37)
+
+## Publish a repository release
+
+A Git tag identifies an exact version of the shared skills. A GitHub release presents the release notes for that tag. An installable package or additional download attachment is not required. Publishing a release does not update skills already installed in another project.
+
+1. Prepare the version entry in [CHANGELOG.md](../../CHANGELOG.md), following [Keep a Changelog Workflow](../../skills/keep-a-changelog-workflow/SKILL.md). Verify that the changes belong to the selected version; keep later changes under Unreleased.
+2. For a historical release, verify that the existing version tag identifies the expected repository state. Never move an existing tag or reconstruct a historical version from today's code. For a new version, merge the reviewed changes, then create and push the agreed version tag at the reviewed revision before publishing.
+3. Copy the matching changelog entry into a temporary Markdown file, starting at `### Release notes` and including all categorized changes and source links. Exclude other versions, Unreleased, and the changelog's link definitions. Create a draft release using the exact existing tag and review the description.
+4. Publish historical releases from oldest to newest, using `--latest=false` for older versions. Explicitly mark the newest completed version as latest. For the existing versions `0.1.0` through `0.5.0`, the latest is `0.5.0`. GitHub records publication when the release is published; the changelog retains its recorded historical dates.
+5. Read each release back from GitHub. Confirm the tag, release notes, source links, published state, and latest-release designation. Reconcile the matching GitHub release if the maintained changelog notes need correction.
+
+For example, after copying the `0.5.0` entry into `/tmp/0.5.0-release-notes.md`, create the draft:
+
+```bash
+gh release create 0.5.0 --repo jeromeetienne/coding_agent_plugins --verify-tag --draft --title '0.5.0' --notes-file /tmp/0.5.0-release-notes.md
+```
+
+After review, publish the newest completed version and verify the result:
+
+```bash
+gh release edit 0.5.0 --repo jeromeetienne/coding_agent_plugins --draft=false --latest
+gh release view 0.5.0 --repo jeromeetienne/coding_agent_plugins --json tagName,name,body,isDraft,isPrerelease,url
+gh api repos/jeromeetienne/coding_agent_plugins/releases/latest --jq '.tag_name'
+```
 
 ## Read the published documentation
 
