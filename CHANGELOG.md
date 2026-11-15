@@ -9,14 +9,19 @@ The format follows [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/
 
 Issue Fix Review now requires explicit approval before committing the reviewed changes, creating and merging the pull request, and closing the issue. Reusable skills must contain Markdown files only, with executable tools maintained in separate repositories. The repository also adds an installed copy of Pull Request Creation for preparing clear titles and descriptions from the complete change and actual validation.
 
+Symbiospec format `3.0.0` separates original coverage examinations from maintained topic summaries, preserving evidence and unexamined scope. Issue and pull request writing now explicitly requires Markdown formatting for readability.
+
 The repository no longer includes its GitHub Pages website configuration.
 
 ### Added
 
+- Add the reusable `pull_request_creation` skill, an adoption guide, and collection discovery links for preparing titles and descriptions from complete changes and actual validation. [Pull request 113](https://github.com/jeromeetienne/coding_agent_plugins/pull/113)
 - Add an installed copy of `pull_request_creation`, with guidance for describing the complete change, reporting validation accurately, and respecting the receiving repository's review and publication workflow. [Commit](https://github.com/jeromeetienne/coding_agent_plugins/commit/6a30bdeb1061110c5016edb909f4597580614b77)
 
 ### Changed
 
+- Introduce Symbiospec format `3.0.0`, with permanent original coverage examination records and maintained topic summaries that distinguish summary freshness from software verification. Provide forward and reverse migration instructions; all three Symbiospec skills require automatic migration through published transitions before normal work. Completed migrations remove obsolete paths without compatibility pages or redirects. [Pull request 114](https://github.com/jeromeetienne/coding_agent_plugins/pull/114)
+- Require readable Markdown in issue bodies, issue comments, and pull request descriptions, with formatting proportional to the content and consistent with repository templates and reference rules. [Pull request 116](https://github.com/jeromeetienne/coding_agent_plugins/pull/116)
 - Require explicit approval for Issue Fix Completion after explaining the commit, pull request, merge, and issue-closing actions; update the installed Issue Fix Workflow copy to match. [Pull request 112](https://github.com/jeromeetienne/coding_agent_plugins/pull/112), [commit](https://github.com/jeromeetienne/coding_agent_plugins/commit/6a30bdeb1061110c5016edb909f4597580614b77)
 - Require Markdown files only throughout `skills/`, including subfolders; keep executable tools in separate repositories and link to those tools from the instructions. [Pull request 110](https://github.com/jeromeetienne/coding_agent_plugins/pull/110)
 
