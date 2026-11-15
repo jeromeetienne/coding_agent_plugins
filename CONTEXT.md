@@ -6,6 +6,7 @@ The standalone repository for shared workflow skills and Jérôme Étienne’s p
 ## Key Exports & Entry Points
 - `skills/`: the skill folders, each with instructions for the coding agent in `SKILL.md` and an overview of its purpose for people in `README.md`.
 - [README.md](README.md): installation commands, receiving-project configuration, and skill maintenance.
+- [CHANGELOG.md](CHANGELOG.md): release notes and evidence-linked changes for the repository's version tags.
 - `docs/`: the documentation of this repository for people, organized by the skill `docs_folder_system`; start at [docs/README.md](docs/README.md).
 - [AGENTS.md](AGENTS.md): the instructions for the coding agents, with the values of the skill `docs_folder_system`.
 

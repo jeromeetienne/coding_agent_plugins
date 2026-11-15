@@ -11,6 +11,7 @@ These rules record the approved responsibilities of the folders below. Changes t
 
 | Folder | Does | Never does | Language and technologies | Workflow |
 | --- | --- | --- | --- | --- |
+| `/` | Holds repository guidance, licensing, and the changelog. | Holds reusable skills outside `skills/`. | Root documents use Markdown. | Follow the repository rules. |
 | `skills/` | Holds reusable skill instructions and supporting scripts, templates, and references. | Holds repository-specific configuration or standalone executable tools. | Markdown instructions; supporting files use the format the skill needs. | Make reusable skill changes here; maintain standalone executable tools in separate repositories. |
 | `docs/` | Holds documentation for people and links to skill instructions. | Copies skill instructions. | Markdown. | Follow `docs_folder_system`. |
 | `docs/using_skills/` | Explains skill installation, configuration, and combinations. | Copies authoritative skill instructions. | Markdown. | Follow `docs_folder_system`; keep navigation short. |
