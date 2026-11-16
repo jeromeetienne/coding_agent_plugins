@@ -23,7 +23,7 @@ Symbiospec is a shared product specification. Humans can read and approve Symbio
 
 Symbiospec describes the concepts of the product, the expected behaviours, the user interface, the styling, the supported platforms, and the overall organization of the system. Symbiospec does not describe each line of code.
 
-Optional user scenarios connect these areas through a person’s goal, actions and expected outcome. Human approval establishes the intended journey; a separate specification review checks whether the descriptions support the journey, and software verification records what was actually checked in the application. The [workflows guide](workflows.md) explains user scenarios and the two explicitly requested audits.
+Optional user scenarios connect these areas through a person’s goal, actions and expected outcome. Human approval establishes the intended journey; a separate specification review checks whether the descriptions support the journey, and software verification records what was actually checked in the application. The [User scenarios workflow](workflow_user_scenarios.md), [Symbiospec Audit for self-consistency](workflow_audit_self_consistency.md), and [Symbiospec Audit for software compliance](workflow_audit_software_compliance.md) explain the journeys and the two explicitly requested audits.
 
 ## 2. Purpose
 

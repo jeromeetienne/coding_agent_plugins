@@ -9,15 +9,22 @@
 
 This folder explains the concept Symbiospec to a person. Symbiospec is a shared product specification that humans can read and approve, and that coding agents use to guide the implementation and the verification of the software.
 
+Initialization, Update, and Realignment maintain Symbiospec. Initialization establishes a baseline and may continue incrementally in uncovered areas while Update maintains already established areas. Update and Realignment repeat throughout development. The two audits provide explicitly requested reviews.
+
 Read the documents in this order:
 
 1. [what_is_symbio_spec.md](what_is_symbio_spec.md): what Symbiospec is, the problem that Symbiospec solves, what Symbiospec tries to do, and the reason for the name.
 2. [areas.md](areas.md): the six areas of Symbiospec, and what each area is for.
-3. [workflows.md](workflows.md): Initialization, Update, Realignment, user scenarios, and both explicitly requested audits, with review and comparison examples.
-4. [specification_example.md](specification_example.md): a small proposed specification, decisions and coverage for a fictional note editor.
-5. [symbio_spec_to_docs.md](symbio_spec_to_docs.md): how approved and implemented product information becomes documentation for a chosen audience.
-6. [symbio_spec_to_ux.md](symbio_spec_to_ux.md): how approved product information supports proposals for screens and navigation, and the limits of the draft skill.
-7. [documentation_example.md](documentation_example.md): a complete configured example turning approved and implemented product information into help pages.
+3. [Initialization](workflow_initialization.md): the explanation and review limits of Initialization.
+4. [Update](workflow_update.md): the explanation and review limits of Update.
+5. [Realignment](workflow_realignment.md): the explanation and review limits of Realignment.
+6. [User scenarios](workflow_user_scenarios.md): the explanation and review limits of User scenarios.
+7. [Symbiospec Audit for self-consistency](workflow_audit_self_consistency.md): the explanation and review limits of Symbiospec Audit for self-consistency.
+8. [Symbiospec Audit for software compliance](workflow_audit_software_compliance.md): the explanation and review limits of Symbiospec Audit for software compliance.
+9. [specification_example.md](specification_example.md): a small proposed specification, decisions and coverage for a fictional note editor.
+10. [symbio_spec_to_docs.md](symbio_spec_to_docs.md): how approved and implemented product information becomes documentation for a chosen audience.
+11. [symbio_spec_to_ux.md](symbio_spec_to_ux.md): how approved product information supports proposals for screens and navigation, and the limits of the draft skill.
+12. [documentation_example.md](documentation_example.md): a complete configured example turning approved and implemented product information into help pages.
 
 These documents explain the concept. They do not give the instructions for a coding agent. The instructions are in the skill `symbio_spec`:
 
