@@ -10,7 +10,7 @@ The skills in this collection turn that collaboration into everyday practice: ag
 
 Start with [About Symbiospec](docs/about_symbio_spec/README.md), or explore the reusable skills below. A skill is a folder containing a SKILL.md instruction file and a README explaining adoption and use.
 
-Read the **[documentation website](https://jeromeetienne.github.io/coding_agent_plugin/)** or the [documentation overview](docs/README.md). The collection contains 17 skills: fourteen current skills, two draft skills, and one obsolete skill retained for existing projects. Installation currently selects individual skills; there is no plugin manifest.
+Read the **[documentation website](https://jeromeetienne.github.io/coding_agent_plugin/)** or the [documentation overview](docs/README.md). The collection contains 16 skills: fourteen current skills, one draft skill, and one obsolete skill retained for existing projects. Installation currently selects individual skills; there is no plugin manifest.
 
 ## Choose skills
 
@@ -23,7 +23,6 @@ Start with [How the skills work together](docs/using_skills/skills_together.md) 
 | [issue_fix_workflow](skills/issue_fix_workflow/README.md) | Fix one issue in a temporary worktree with human review before completion. |
 | [issue_batch_workflow](skills/issue_batch_workflow/README.md) | Implement related issues in dependency order with helper agents after the initial decisions. |
 | [git_cleanup_review](skills/git_cleanup_review/README.md) | Review redundant branches and worktrees and recommend a removal order; advice only. |
-| [faster_rust_worktrees](skills/faster_rust_worktrees/README.md) | **Draft, not yet evaluated:** guide copy-on-write reuse of Cargo output in independent Rust worktrees. |
 | [rules_of_the_repo](skills/rules_of_the_repo/README.md) | Select the repository rule skills that apply to a change and supply their configuration. |
 | [repo_folders_constraints](skills/repo_folders_constraints/README.md) | Apply human-owned folder and package responsibilities, boundaries, and change rules. |
 | [context_md_system](skills/context_md_system/README.md) | Maintain short folder notes describing purpose, exports, and rules. |
@@ -51,6 +50,8 @@ Or install one skill:
 ```bash
 npx skills add jeromeetienne/coding_agent_plugin --skill issue_fix_workflow
 ```
+
+Faster Rust Work Trees, including the `faster_rust_worktrees` skill and its shared tool, is maintained in the [dedicated repository](https://github.com/jeromeetienne/faster-rust-worktrees). Follow that repository for installation and configuration.
 
 ## Configure the installed skills
 

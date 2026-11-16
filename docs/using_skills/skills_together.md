@@ -21,7 +21,6 @@ Install the skills needed for the work rather than assuming the whole collection
 | Record and maintain approved product intent | [Symbiospec](../../skills/symbio_spec/README.md) | Symbiospec to documentation when approved specifications and implementation are available |
 | Write release notes from repository evidence | [Keep a Changelog Workflow](../../skills/keep-a-changelog-workflow/README.md) | Existing pull requests and version tags |
 | Identify redundant worktrees and branches | [Git Cleanup Review](../../skills/git_cleanup_review/README.md) | A separate authorized removal task after the review |
-| Reuse Cargo builds in independent worktrees | [faster_rust_worktrees](../../skills/faster_rust_worktrees/README.md) | **Draft:** existing repository build and worktree workflow; optionally integrate with Issue Fix Workflow |
 
 ## Required dependencies and optional combinations
 
@@ -107,9 +106,10 @@ Required inputs below come from current instructions. Optional relationships are
 | `issue_creation` | Installed, authenticated gh or glab and target-project access; attachment files when used. | No configuration file or companion skill required; called by issue workflows and other authorized issue-writing tasks. |
 | `pull_request_creation` | Complete intended change, repository instructions and templates, relevant issues, and actual validation evidence; authenticated repository tool and access for remote publication. | No configuration file or companion skill required. Complements issue_creation; issue_fix_workflow and issue_batch_workflow can use the writing guidance at their permitted publication stage. Existing review and publication requirements remain in force. |
 | `git_cleanup_review` | Readable Git history, branches/worktrees, repository instructions and identified destination; report missing evidence. | Remote access supports live checks. No configuration file or companion skill; removal needs a separate request. |
-| `faster_rust_worktrees` | Draft Markdown instructions; Git, Cargo, actual receiving-repository build commands, existing output, and a file system supporting copy-on-write. | No package or companion skill required. Optionally updates the receiving Issue Fix Workflow worktree command when applying the skill. Independent-project evaluation is pending; no general support claim. Cleanup previews do not authorize removal. |
 | `context_md_system` | Repository files and parent context files; no configuration file required. | Complements repo_folders_constraints; can be registered in rules_of_the_repo. |
 | `docs_folder_system` | Supplied documentation-folder and metadata-exception values through configuration or AGENTS.md. | Independent or called through rules_of_the_repo; other documentation skills follow it when required. |
 | `jerome-typescript-javascript-style` | Bundled style reference; project/request adopting the personal style; no configuration file. | Related source for Rust adaptation; Rust skill is not required. Preference changes need explicit instructions. |
 | `jerome-rust-style` | Bundled active Rust rules; adaptation review when extending the style; no configuration file. | Self-contained adaptation of TypeScript/JavaScript preferences. Uncertain adaptations need Jérôme Étienne’s decision. |
 | `docs_folder_agents_rules_system` | docs_folder_system; supplied agent-rules folder, glossary folder, size maximum and size-test command. | Superseded by symbio_spec; retained for existing projects. Migration is a separate authorized task. |
+
+Faster Rust Work Trees and its `faster_rust_worktrees` skill are maintained in the [dedicated repository](https://github.com/jeromeetienne/faster-rust-worktrees). Use that repository for the shared tool, installation, configuration, and evaluation evidence.
