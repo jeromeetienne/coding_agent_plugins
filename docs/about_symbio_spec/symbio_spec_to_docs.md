@@ -41,5 +41,5 @@ Writing pages, reviewing content, building documentation and publishing a websit
 
 - [symbio_spec_to_docs overview](../../skills/symbio_spec_to_docs/README.md): adoption requirements and expected results.
 - [Skill instructions](../../skills/symbio_spec_to_docs/SKILL.md) and [configuration reference](../../skills/symbio_spec_to_docs/references/configuration.md): authoritative procedures and required values.
-- [Symbiospec workflows and audits](workflows.md): maintaining the approved information that documentation uses.
+- [Update](workflow_update.md): maintaining the approved information that documentation uses.
 - [Symbiospec to UX](symbio_spec_to_ux.md): the separate draft skill for proposing screens and navigation.

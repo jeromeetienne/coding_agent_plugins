@@ -49,5 +49,5 @@ A request for an interface proposal does not authorize implementation or a proto
 ## 5. Further reading
 
 - [symbio_spec_to_ux overview](../../skills/symbio_spec_to_ux/README.md) and [skill instructions](../../skills/symbio_spec_to_ux/SKILL.md): current status, authoritative workflow and trial requirements.
-- [Symbiospec workflows and audits](workflows.md): user scenarios, approval and the distinction between specification review and software verification.
+- [User scenarios workflow](workflow_user_scenarios.md): user scenarios, approval and the distinction between specification review and software verification.
 - [Symbiospec to documentation](symbio_spec_to_docs.md): the separate skill for audience guidance supported by approval and implementation evidence.
