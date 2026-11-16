@@ -4,15 +4,43 @@
 
 ### 0.1. Purpose
 
-Use a human-supplied user scenario to start product design, or generate proposed user scenarios from existing Symbiospec. Apply the [shared version check](versioning.md) first and follow [the user scenario format](format-v3.1.0.md#5-user-scenarios). These instructions do not authorize software changes or an audit.
+Start with a human-provided batch of user scenarios, or generate proposed user scenarios from existing Symbiospec or existing software. Apply the [shared version check](versioning.md) first and follow [the user scenario format](format-v3.1.0.md#5-user-scenarios). These instructions do not authorize software changes or an audit.
 
-## 1. Establish the source and scope
+## 1. Choose the starting path
 
-For a human-supplied user scenario, preserve the person's goal, starting conditions, actions, expected outcome and relevant failure or recovery paths. Ask about information needed to understand the intended journey; do not require all supporting product descriptions before accepting or approving the journey.
+Identify the source and the requested product scope before generating or organizing user scenarios. If the project has no Symbiospec folder, use [Initialize Symbiospec](workflow_initialize.md) within the authorized task; an empty structure supplies no approved product meaning. If Symbiospec already exists, preserve the existing descriptions and approvals. Store project documents using [the user scenario format](format-v3.1.0.md#5-user-scenarios) and the template in section 6, maintaining folder overviews and indexes.
 
-For generation from existing Symbiospec, choose and report a bounded scope. Read the relevant approved concepts, Behaviour and User Interface descriptions and their approval evidence. Generate proposals with links to those sources, distinguishing inferred journeys from explicit source statements. Report examined and unexamined areas and ask the human which goals or journeys are missing. Generated proposals can repeat omissions in Symbiospec; the generated set never establishes complete coverage. Do not infer human approval from the approval of source descriptions.
+### 1.1. Generate from existing Symbiospec
 
-Create one project document per user scenario in `docs/symbio_spec/user_scenarios/` only within authorized work. Maintain the folder overview, folder index and root index. Use the template below with actual values and receiving-project metadata conventions. Never publish placeholders as evidence.
+Read the approved concepts, Behaviour and User Interface descriptions in the selected scope, including their approval evidence. Propose goal-oriented journeys with links to the descriptions used; distinguish an inferred journey from an explicit source statement. State examined and unexamined scope, gaps and uncertainty. Ask the human which goals or journeys are missing, then record acceptance, rejection or requested revision using section 3. Source approval never automatically approves a generated user scenario; generation can repeat source omissions and cannot establish complete coverage.
+
+Example: approved descriptions explain opening, editing and saving a Note. Propose “Edit a Note and retain the changes,” linking the descriptions for each action. If save failure recovery is absent, record that gap rather than inventing retry. The human may approve the intended journey while recovery remains undecided.
+
+### 1.2. Generate from existing software
+
+Within the requested scope, inspect source code, tests and permitted application observations to identify what a person appears able to accomplish. Record evidence paths, inspected software revision, and, for any execution, the environment and actual results. Keep source inspection, test inspection, executed tests and application observation distinct. Group technical operations into proposed user goals rather than listing internal functions as user scenarios.
+
+Label every generated user scenario as a proposal. Separate observed or inferred implementation from intended product meaning. Check relevant existing approved Symbiospec descriptions before proposing changes; an implementation difference does not override approved intent. Report inaccessible evidence and unexamined capabilities, and ask the human about missing goals and whether the observed journeys are intended. Do not claim working software from reading code or tests.
+
+After human approval, create or update the supporting Symbiospec descriptions within the approved scope, preserving missing decisions. Then perform section 2's walkthrough using Symbiospec alone. Code evidence belongs in Source or Software verification; code cannot fill a gap in specification review. This bounded discovery does not launch either audit or authorize software corrections.
+
+Example: source code exposes a control that duplicates a Note, but no approved description explains duplication. Propose “Create a separate Note from an existing Note,” linking the control and duplication implementation as inspected evidence. Whether duplication includes attachments remains unresolved unless evidence establishes the current behaviour; whether attachments should be duplicated still needs product authorization. Record Software not exercised if only code was read.
+
+### 1.3. Start with a human-provided batch
+
+Preserve every supplied goal, starting condition, action, outcome and relevant failure or recovery path. Record source and approval scope separately for each user scenario: supplying a batch is not necessarily approval, while an explicit instruction approving the batch is authorization within its stated scope and needs no repeated approval request.
+
+Organize the batch by person and goal. Identify overlaps, shared concepts, dependencies and apparently conflicting expectations. Do not silently merge distinct journeys, drop a supplied user scenario or resolve a product conflict. Preserve the source mapping when suggesting consolidation. Keep one project document per user scenario; a review batch can reference several documents and shared proposed decisions.
+
+For a new project, identify the concepts, Behaviour and User Interface descriptions needed by the batch. For an existing project, link relevant approved descriptions first and identify the missing or conflicting parts. Prepare concrete proposed product decisions with reasons and examples, grouping shared decisions so the human need not answer the same question separately for every user scenario. Ask about information needed to understand the journeys without requiring all supporting descriptions before journey approval.
+
+After the human decides, record the actual approval scope and update supporting descriptions in small coherent increments using section 3. Each user scenario links to the shared definitions rather than copying rules. Perform section 2's walkthrough for the user scenarios being created or reviewed, leaving undecided actions, navigation and recovery explicit. Do not require completing the entire batch or all six specification areas before a useful increment is established.
+
+Example: the human supplies “Create a Note,” “Edit a Note,” and “Recover from a failed save.” Keep three user scenario documents linked to one Note concept and the shared save Behaviour. If the human has not decided whether unsaved text survives failure, present that choice once with its effects on editing and recovery. Journey approval alone does not settle that choice. After authorization, update the shared save description and link the affected user scenario steps.
+
+### 1.4. Combine sources
+
+A human-provided batch may be supplemented by proposals generated from Symbiospec or software. Label the source and approval of each user scenario independently, and identify supplied and generated material within a mixed user scenario. Existing human approval does not approve generated additions. Report missing goals and partial coverage using the relevant starting path above.
 
 ## 2. Walk through Symbiospec
 
@@ -56,8 +84,9 @@ Adapt the following template; replace every instruction in angle brackets with a
 
 ## 1. Source
 
-<Human-supplied or generated by the coding agent; source discussion and links
- to descriptions used; examined and unexamined scope for generation.>
+<Human-supplied, generated from Symbiospec, generated from software, or mixed;
+ source discussion and links to descriptions or software evidence; inspected
+ revision, methods and examined and unexamined scope for generation.>
 
 ## 2. Human approval
 
