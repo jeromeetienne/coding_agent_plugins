@@ -1,11 +1,11 @@
 # What Symbiospec is
 
 - Created: 28 October 2026
-- Last updated: 9 November 2026
+- Last updated: 16 November 2026
 - Status: Maintained explanation of the concept Symbiospec for people
 - Related framing: [Agent instructions](../../AGENTS.md)
 - Related rules: [docs_folder_system](../../skills/docs_folder_system/SKILL.md)
-- Related issue: [Issue 15](https://github.com/jeromeetienne/coding_agent_plugin/issues/15), [Issue 10](https://github.com/jeromeetienne/coding_agent_plugin/issues/10), [Issue 11](https://github.com/jeromeetienne/coding_agent_plugin/issues/11)
+- Related issue: [Issue 15](https://github.com/jeromeetienne/coding_agent_plugin/issues/15), [Issue 10](https://github.com/jeromeetienne/coding_agent_plugin/issues/10), [Issue 11](https://github.com/jeromeetienne/coding_agent_plugin/issues/11), [Issue 124](https://github.com/jeromeetienne/coding_agent_plugins/issues/124)
 
 ## 0. Introduction
 
@@ -22,6 +22,8 @@ Separates current reusable instructions from the broader design proposal and uns
 Symbiospec is a shared product specification. Humans can read and approve Symbiospec. Coding agents use Symbiospec to guide the implementation and the verification of the software.
 
 Symbiospec describes the concepts of the product, the expected behaviours, the user interface, the styling, the supported platforms, and the overall organization of the system. Symbiospec does not describe each line of code.
+
+Optional user scenarios connect these areas through a person’s goal, actions and expected outcome. Human approval establishes the intended journey; a separate specification review checks whether the descriptions support the journey, and software verification records what was actually checked in the application. The [workflows guide](workflows.md) explains user scenarios and the two explicitly requested audits.
 
 ## 2. Purpose
 
@@ -63,10 +65,12 @@ Symbiospec is the short form of "Symbiotic Spec", the name that [issue #10](http
 | Location and format | Markdown project data under `docs/symbio_spec/`, six areas, decisions and coverage records. | Historical `docs/agent_rules` paths do not select a new project's location. |
 | Folder responsibilities | Area overviews state contents, exclusions and references; indexes list children. | No additional structured folder-contract format is required. |
 | Concepts and aliases | Canonical definitions, stable document or heading references, evidence and human decisions. | No mandatory identifier scheme or blind rename of code, stored data or external interfaces. |
-| Auditing and comparison | Bounded read-only investigation and Realignment findings with evidence, severity, confidence and recommendations. | No dedicated executable audit command, automatic completeness score or exhaustive product verification is supplied. |
+| User scenarios | Human-supplied or generated journeys, with separate approval, specification review and software verification. | Generated journeys remain proposals until approved; approval does not prove software behaviour or settle missing product decisions. |
+| Auditing and comparison | Explicitly requested Symbiospec Audit for self-consistency and Symbiospec Audit for software compliance, with bounded findings and evidence; Realignment handles authorized corrections. | Neither audit runs automatically after rule changes; no executable audit command, automatic completeness score or exhaustive product verification is supplied. |
 | Initialization and migration | Small validated increments preserve useful documents and known approvals. | Uncertain history and existing code do not establish approval. |
 | Review and tests | Prepared product decisions and checks appropriate to the actual change. | Automatic test generation and independent verification by separate agents remain design ideas, not supplied capabilities. Technical checks for security, data integrity and performance remain necessary. |
-| Audience documentation | `symbio_spec_to_docs` separately uses approved sources plus implementation evidence and supplied configuration. | No automatic publication or screenshot generation is established by `symbio_spec`. |
+| Audience documentation | [Symbiospec to documentation](symbio_spec_to_docs.md) uses approved sources, implementation evidence and supplied audience configuration. | Writing documentation does not authorize publication. |
+| Interface proposals | [Symbiospec to UX](symbio_spec_to_ux.md) proposes screens and navigation from approved sources for human review. | The skill remains a draft without a completed real-project trial; a proposal does not establish implemented behaviour. |
 
 The older [docs_folder_agents_rules_system](../../skills/docs_folder_agents_rules_system/README.md) is obsolete for new adoption. Existing installations are preserved and migrated only through an authorized task. [docs_folder_system](../../skills/docs_folder_system/README.md) governs document form when required by a receiving project; document form does not approve product meaning.
 
