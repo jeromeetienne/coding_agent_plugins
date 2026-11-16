@@ -13,6 +13,7 @@ The standalone repository for shared workflow skills and Jérôme Étienne’s p
 ## Rules
 - Skills remain Markdown instructions and require no application build or package dependencies.
 - The repository has no plugin manifest; installation currently installs individual skills.
+- The `faster_rust_worktrees` skill is a Markdown-only draft; independent-repository evaluation is pending and no executable package is required.
 - This independent repository is the authoritative location for all skills; make future skill changes here, as [README.md](README.md#maintain-the-skills) describes.
 - Projects and user configurations that receive the skills are not synchronized automatically.
 - Symbiospec format `3.1.0` defines optional human-approved user scenarios, stores original decisions and coverage examinations in dated files, and maintains topic summaries under the [current definition](skills/symbio_spec/references/format-v3.1.0.md); older definitions are migration sources under the shared automatic-migration procedure, and normal work requires its latest published target.
