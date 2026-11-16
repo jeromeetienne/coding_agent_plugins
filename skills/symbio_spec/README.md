@@ -12,7 +12,7 @@ Use `symbio_spec` to introduce Symbiospec into new or existing software, maintai
 
 The specification separates Glossary, Behaviour, User Interface, Styling, Platform Support and System Overview. The [shared definition](../../docs/about_symbio_spec/what_is_symbio_spec.md) explains the purpose and current limits; the [area guide](../../docs/about_symbio_spec/areas.md) explains which area owns each fact.
 
-User scenarios can start product design before every supporting description exists, or can be proposed from existing Symbiospec. Every user scenario requires human approval. Store project user scenarios under `docs/symbio_spec/user_scenarios/`, keeping the approved journey, pending revisions, specification findings and software verification separate. See the [workflow and template](references/workflow_user_scenarios.md) and [fictional example](references/user_scenario_examples.md).
+User scenarios can start product design from a human-provided batch before every supporting description exists, or can be proposed from existing Symbiospec or software. The [starting paths and examples](../../docs/about_symbio_spec/workflows.md#51-choose-a-starting-point) explain how to choose a source and turn the journeys into supporting descriptions. Every user scenario requires human approval. Store project user scenarios under `docs/symbio_spec/user_scenarios/`, keeping the approved journey, pending revisions, specification findings and software verification separate. See the [workflow and template](references/workflow_user_scenarios.md) and [fictional example](references/user_scenario_examples.md).
 
 ## Requirements
 
