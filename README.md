@@ -1,6 +1,14 @@
 # Coding agent skills
 
-Reusable instructions for coding agents, maintained in [jeromeetienne/coding_agent_plugin](https://github.com/jeromeetienne/coding_agent_plugin). A skill is a folder containing a SKILL.md instruction file and a README explaining adoption and use.
+**Build software through human–AI symbiosis.**
+
+Humans bring purpose, judgment, and the decisions that make a product worth building. AI brings the ability to explore ideas, write code, and check the results. Building together needs a shared understanding of what the software should do—and why.
+
+[Symbiospec](docs/about_symbio_spec/what_is_symbio_spec.md) gives humans and AI that shared understanding: a living product specification that humans can read, discuss, and approve, and coding agents can use to guide implementation and verification. As the software evolves, Symbiospec preserves the decisions behind the product and helps reveal differences between approved intent and working software.
+
+The skills in this collection turn that collaboration into everyday practice: agree on the product, make repository rules explicit, build changes, review the results, and keep documentation aligned. Humans guide the direction; coding agents carry the work forward with a common reference.
+
+Start with [About Symbiospec](docs/about_symbio_spec/README.md), or explore the reusable skills below. A skill is a folder containing a SKILL.md instruction file and a README explaining adoption and use.
 
 Read the **[documentation website](https://jeromeetienne.github.io/coding_agent_plugin/)** or the [documentation overview](docs/README.md). The collection contains 16 skills: fourteen current skills, one draft skill, and one obsolete skill retained for existing projects. Installation currently selects individual skills; there is no plugin manifest.
 
