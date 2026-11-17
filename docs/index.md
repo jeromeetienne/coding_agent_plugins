@@ -1,7 +1,7 @@
 # Documentation index
 
 - Created: 28 October 2026
-- Last updated: 14 November 2026
+- Last updated: 16 November 2026
 - Status: Maintained index for agents and tools
 - Related framing: [Agent instructions](../AGENTS.md)
 - Related issue: [Issue 80](https://github.com/jeromeetienne/coding_agent_plugins/issues/80)
@@ -14,3 +14,4 @@ For people using or maintaining this collection: choose the question you want an
 - [Tools](tools/index.md): Where to find independently maintained executable tools.
 - [About Symbiospec](about_symbio_spec/index.md): What Symbiospec means and how its workflows work.
 - [Coding in AI era](coding_in_ai_era/index.md): How to retain human control while coding with AI.
+- [Skills as software packages](skillmd_software/index.md): Discussion of skill classification and software lifecycle capabilities.
