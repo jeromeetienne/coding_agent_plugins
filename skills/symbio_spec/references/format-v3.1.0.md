@@ -77,6 +77,8 @@ For an existing installation, inspect before creating anything. Preserve existin
 
 During authorized initialization, add a concise pointer in the repository's coding-agent instructions to this skill and `docs/symbio_spec/index.md`: read relevant approved specifications before implementation and update affected specifications within the same authorized development task. Merge the pointer with existing instructions, use actual skill paths, and do not replace other rules or silently relocate existing agent rules.
 
+See [where to add the repository instruction pointer](workflow_initialize.md#3-add-the-repository-instruction-pointer) for the route through The Rules of the Repo and the route through a direct entry in the repository's coding-agent instructions.
+
 ## 2. Responsibilities of the six areas
 
 ### 2.1. Glossary

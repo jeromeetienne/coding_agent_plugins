@@ -8,29 +8,29 @@ Symbiospec is short for “Symbiotic Spec”. “Symbiotic” expresses the coll
 
 ## When to use
 
-Use `symbio_spec` to introduce Symbiospec into new or existing software, maintain approved expectations during development, or investigate differences between approved expectations, software and tests. Request **Symbiospec Audit for self-consistency** to review agreement within Symbiospec, or **Symbiospec Audit for software compliance** to compare software and approved Symbiospec in both directions, including undocumented software capabilities. The [shared workflow guide](../../docs/about_symbio_spec/README.md) explains Initialization, Update, Realignment, and both audits with examples.
+Use `symbio_spec` to introduce Symbiospec into new or existing software, maintain approved expectations during development, or investigate differences between approved expectations, software and tests. Request **Symbiospec Audit for self-consistency** to review agreement within Symbiospec, or **Symbiospec Audit for software compliance** to compare software and approved Symbiospec in both directions, including undocumented software capabilities. The [shared workflow guide](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/docs/about_symbio_spec/README.md) explains Initialization, Update, Realignment, and both audits with examples.
 
-The specification separates Glossary, Behaviour, User Interface, Styling, Platform Support and System Overview. The [shared definition](../../docs/about_symbio_spec/what_is_symbio_spec.md) explains the purpose and current limits; the [area guide](../../docs/about_symbio_spec/areas.md) explains which area owns each fact.
+The specification separates Glossary, Behaviour, User Interface, Styling, Platform Support and System Overview. The [shared definition](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/docs/about_symbio_spec/what_is_symbio_spec.md) explains the purpose and current limits. The [area guide](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/docs/about_symbio_spec/areas.md) explains which area owns each fact.
 
-User scenarios can start product design from a human-provided batch before every supporting description exists, or can be proposed from existing Symbiospec or software. The [starting paths and examples](../../docs/about_symbio_spec/workflow_user_scenarios.md#choose-a-starting-point) explain how to choose a source and turn the journeys into supporting descriptions. Every user scenario requires human approval. Store project user scenarios under `docs/symbio_spec/user_scenarios/`, keeping the approved journey, pending revisions, specification findings and software verification separate. See the [workflow and template](references/workflow_user_scenarios.md) and [fictional example](references/user_scenario_examples.md).
+User scenarios can start product design from a human-provided batch before every supporting description exists, or can be proposed from existing Symbiospec or software. The [starting paths and examples](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/docs/about_symbio_spec/workflow_user_scenarios.md#choose-a-starting-point) explain how to choose a source and turn the journeys into supporting descriptions. Every user scenario requires human approval. Store project user scenarios under `docs/symbio_spec/user_scenarios/`, keeping the approved journey, pending revisions, specification findings and software verification separate. See the [workflow and template](references/workflow_user_scenarios.md) and [fictional example](references/user_scenario_examples.md).
 
 ## Requirements
 
 The coding agent needs access to repository instructions, existing specifications and relevant project evidence. Existing software may require reading source code, tests, Git history and issue discussions, plus permitted application observation. Record unavailable evidence rather than claiming complete coverage. A person must make product decisions that are not already authorized.
 
-No companion skill is always required. Follow the receiving project's documentation rules, including `docs_folder_system` when required. No application framework, renderer or hosting service is required.
+The core skill includes the instructions and references needed to initialize and maintain Symbiospec on its own. Follow the receiving project's documentation rules, including `docs_folder_system` when required. No application framework, renderer or hosting service is required.
 
 ## Install
 
 ```bash
-npx skills add jeromeetienne/coding_agent_plugin --skill symbio_spec
+npx skills add jeromeetienne/coding_agent_plugins --skill symbio_spec
 ```
 
-See the [collection installation guidance](../../README.md#install-the-skills). Installation does not initialize project documentation or approve product decisions.
+See the [collection installation guidance](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/README.md#install-the-skills). Request [Initialize Symbiospec](references/workflow_initialize.md) after installation to set up the project specification.
 
 ## Configuration and adoption
 
-`symbio_spec` needs no separate configuration file. Project data belongs at `docs/symbio_spec/`, relative to the receiving repository root. During authorized initialization, the coding agent adds a short instruction pointer using the actual installed skill path. The [format reference](references/format.md#1-repository-structure) gives the structure and pointer requirements.
+Project data belongs at `docs/symbio_spec/`, relative to the receiving repository root. During authorized initialization, the coding agent links to the installed skill and the project specification index. A repository that uses The Rules of the Repo can provide those links through its rules list and linked configuration. A repository without The Rules of the Repo adds the links directly to its existing coding-agent instructions. See [where to add the repository instruction pointer](references/workflow_initialize.md#3-add-the-repository-instruction-pointer).
 
 New projects use whole-folder format `3.1.0`, separately from the skill release version. Invoking any Symbiospec skill automatically migrates older project data to the latest installed published format before normal work, even when the earlier format is readable. The retained `1.0.0` definition supports conversion, not continued ordinary work. Adoption adds only version metadata as its first step; the [decision storage transition](references/migration-1-to-2.md), [coverage storage transition](references/migration-2-to-3.md), and [optional user scenario transition](references/migration-3-to-3.1.md) then follow with preservation checks and no separate migration approval. The [versioning reference](references/versioning.md) defines the Markdown version record, Semantic Versioning, compatibility checks, and consecutive migrations. An absent record means the existing unversioned format, equivalent to `1.0.0`; verify that adoption preserves every existing specification file, then migrate to the latest target. An explicit instruction forbidding changes blocks required migration and dependent work. Malformed or unsupported versions and incomplete migrations stop normal work. Completed migrations remove obsolete paths after preservation and known repository reference checks. Do not retain redirects, compatibility pages or duplicate navigation; external links that cannot be updated are reported limitations. Recovery snapshots and administrative mappings preserve history separately. Installation alone does not add the record or migrate a project.
 
@@ -50,7 +50,7 @@ A small proposed specification separates these facts:
 | Behaviour | Saving a Note retains the current text; a failed save reports failure without claiming success. |
 | User Interface | The Note editor exposes a Save control linked to the save Behaviour. |
 
-These are fictional proposals, not approved requirements or claims about any real product. The [complete specification example](../../docs/about_symbio_spec/specification_example.md) shows file placement, cross-references, review decisions and coverage.
+These are fictional proposals, not approved requirements or claims about any real product. The [complete specification example](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/docs/about_symbio_spec/specification_example.md) shows file placement, cross-references, review decisions and coverage.
 
 ## Results and review
 
@@ -64,10 +64,12 @@ Existing product authorization applies without asking again. Additional product 
 
 ## Related skills and guides
 
-- [docs_folder_system](../docs_folder_system/README.md) supplies document form and navigation when the receiving project requires those conventions.
-- [symbio_spec_to_docs](../symbio_spec_to_docs/README.md) uses approved Symbiospec and implementation evidence to produce configured audience documentation; generation is a separate task.
-- [issue_batch_workflow](../issue_batch_workflow/README.md) can implement several approved changes through linked parent and sub-issues.
-- [About Symbiospec](../../docs/about_symbio_spec/README.md) provides the shared definition, areas, workflows and examples.
+Companion skills are optional for the core Symbiospec workflows. Look for the named skill among the receiving project's installed skills. If a companion is absent and needed for the requested task, find the companion in the source repository below and use the collection installation command with that skill's name.
+
+- [docs_folder_system](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/skills/docs_folder_system/README.md) supplies document form and navigation when the receiving project requires those conventions.
+- [symbio_spec_to_docs](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/skills/symbio_spec_to_docs/README.md) generates documentation for configured audiences from approved Symbiospec and implementation evidence.
+- [symbio_spec_to_ux draft](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/skills/symbio_spec_to_ux/README.md) proposes screens and navigation from approved Symbiospec for human review.
+- [issue_batch_workflow](https://github.com/jeromeetienne/coding_agent_plugins/blob/main/skills/issue_batch_workflow/README.md) can implement several approved changes through linked parent and sub-issues.
 
 ## Instructions and references
 
