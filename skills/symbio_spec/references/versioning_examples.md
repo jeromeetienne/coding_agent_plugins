@@ -2,7 +2,7 @@
 
 ## 1. Purpose and limits
 
-For contributors checking the [versioning and migration procedure](versioning.md). Use disposable copies of specification files for these exercises. Published Symbiospec formats are `1.0.0`, `2.0.0` and `3.0.0`; see [decision storage examples](decision_examples.md) for the production transition. Exercise layouts A, B, and C are illustrative layouts, not additional published versions or proposals for future storage.
+For contributors checking the [versioning and migration procedure](versioning.md). Use disposable copies of specification files for these exercises. Use the [format registry](format.md) for published formats and [decision storage examples](decision_examples.md) for the original decision storage transition. Exercise layouts A, B, and C are illustrative layouts, not additional published versions or proposals for future storage.
 
 Include the six specification areas, two ordered decision records with sources, dates, scope and an unresolved condition, coverage, a glossary topic, a behaviour topic, and relative references. Compare file inventories, content, and references using the tools available in the receiving environment. These examples require no particular programming language or executable migration tool.
 
@@ -24,7 +24,7 @@ Use this outcome matrix for every entry point:
 | Missing definition or forward conversion | Stop without mutation, including adoption, rather than partially preparing an unavailable path. |
 | Failed or interrupted conversion | Keep the interruption marker and recovery evidence; do not begin normal work on either partially written output or the older source. |
 
-Reject a missing component, a leading zero, a release suffix, duplicate version fields, and an empty field. Reject unknown `1.1.0` and `4.0.0` without mutation. An absent folder requires authorized initialization; a request to inspect an absent folder must not create a specification. Installation that only copies skill files makes no project-data changes and defers the check to first use. Select future targets from the registry's ordered published list; do not assume the current `3.1.0` is permanently latest.
+Reject a missing component, a leading zero, a release suffix, duplicate version fields, and an empty field. Reject unknown `1.1.0` and `4.0.0` without mutation. An absent folder requires authorized initialization; a request to inspect an absent folder must not create a specification. Installation that only copies skill files makes no project-data changes and defers the check to first use. Select future targets from the registry's ordered published list; do not assume any version is permanently latest.
 
 ## 3. Consecutive migration and preservation
 

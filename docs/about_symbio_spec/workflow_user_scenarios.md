@@ -1,7 +1,7 @@
 # User scenarios
 
 - Created: 16 November 2026
-- Last updated: 16 November 2026
+- Last updated: 28 November 2026
 - Status: Maintained explanation of a Symbiospec workflow for people
 - Related framing: [Agent instructions](../../AGENTS.md)
 - Related rules: [docs_folder_system](../../skills/docs_folder_system/SKILL.md)
@@ -61,7 +61,7 @@ The three user scenario documents can share one Note definition and one save Beh
 
 The human can supply the important user scenarios and ask the coding agent to propose additional user scenarios from existing Symbiospec or software. Keeping supplied and generated material distinguishable lets the human review the additions without losing the original goals. Approval of the supplied batch does not automatically approve generated additions.
 
-For the authoritative approval and lifecycle definitions, read [User scenarios in format 3.1.0](../../skills/symbio_spec/references/format-v3.1.0.md#5-user-scenarios). The [user scenario workflow](../../skills/symbio_spec/references/workflow_user_scenarios.md) contains the coding-agent procedure and record template.
+For the authoritative approval and lifecycle definitions, read [User scenarios in the current format](../../skills/symbio_spec/references/format.md#5-user-scenarios). The [user scenario workflow](../../skills/symbio_spec/references/workflow_user_scenarios.md) contains the coding-agent procedure and record template.
 
 ## Related workflows and instructions
 

@@ -16,7 +16,7 @@ Prepare correction decisions in batches. Corrections may affect software, Symbio
 
 ## 4. Apply authorized corrections
 
-Preserve approved intent while applying authorized changes. Do not rewrite the specification simply to match a regression, or reinitialize the entire structure to fix a local difference. Keep software compatibility and unrelated documentation intact.
+Preserve approved intent while applying authorized changes. Do not rewrite the specification simply to match a regression, or reinitialize the entire structure to fix a local difference. Keep software compatibility and unrelated documentation intact. Follow [Resolve and verify proposals](proposal_resolution.md) when a correction decision changes or resolves a proposal.
 
 ## 5. Verify the result
 
