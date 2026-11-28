@@ -1,7 +1,7 @@
 # Symbiospec to documentation
 
 - Created: 16 November 2026
-- Last updated: 16 November 2026
+- Last updated: 28 November 2026
 - Status: Maintained explanation of Symbiospec to documentation for people
 - Related framing: [About Symbiospec](README.md)
 - Related rules: [docs_folder_system](../../skills/docs_folder_system/SKILL.md)
@@ -19,7 +19,7 @@ Generation requires the installed `symbio_spec` skill, the project’s Symbiospe
 
 A documented feature needs both approved Symbiospec and current implementation evidence. An approved but unimplemented feature stays out of the instructions and is reported as a gap. An implemented feature without an approved description also stays out until the product information is resolved. Generation does not silently change approved product meaning to match the application.
 
-Both related skills use the shared version check and automatic migration procedure before normal work with project data. The latest published format is currently `3.1.0`; the authoritative [versioning reference](../../skills/symbio_spec/references/versioning.md) defines migration and stop conditions.
+Both related skills use the shared version check and automatic migration procedure before normal work with project data. The [format registry](../../skills/symbio_spec/references/format.md) lists the latest published format. The [versioning reference](../../skills/symbio_spec/references/versioning.md) defines migration and stop conditions.
 
 ## 3. A practical example
 

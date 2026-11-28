@@ -6,7 +6,7 @@ The [skill instructions](SKILL.md) propose screens and navigation from approved 
 
 The receiving project needs an approved Symbiospec for the selected scope. Missing decisions remain explicit. No visual framework or prototype tool is required.
 
-Normal work requires the latest published Symbiospec format in the installed registry, currently `3.1.0`. The shared [version check and automatic migration procedure](../symbio_spec/references/versioning.md) runs first. Invoking this skill includes authorization to adopt unversioned data and migrate older formats with verified preservation, without a separate migration request. Explicit instructions forbidding changes block required migration and dependent work. Malformed, unknown or newer versions and failed or interrupted migrations stop normal work. Product approval and implementation permissions remain separate from storage conversion.
+Normal work requires the latest published Symbiospec format in the installed registry, currently `3.1.1`. The shared [version check and automatic migration procedure](../symbio_spec/references/versioning.md) runs first. Invoking this skill includes authorization to adopt unversioned data and migrate older formats with verified preservation, without a separate migration request. Explicit instructions forbidding changes block required migration and dependent work. Malformed, unknown or newer versions and failed or interrupted migrations stop normal work. Product approval and implementation permissions remain separate from storage conversion.
 
 Example request:
 

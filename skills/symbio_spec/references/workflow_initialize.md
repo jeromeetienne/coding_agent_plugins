@@ -4,9 +4,11 @@ Before setup, follow [version detection and migration](versioning.md). Existing 
 
 For either workflow below, follow the current [repository structure](format.md#1-repository-structure), [add the repository instruction pointer](#3-add-the-repository-instruction-pointer), and [verify initialization](#4-verify-initialization).
 
+If proposals already exist, [inspect the proposals and their index](proposal_resolution.md#3-inspect-existing-proposals) and handle settled material within the authorized scope.
+
 ## 1. New software
 
-Read [format.md](format.md), repository instructions, and existing documentation. Create the agreed structure at `docs/symbio_spec/`, including `format-version.md` with the latest published version from the installed registry (currently `3.1.0`), folder contracts in the overviews, and accurate navigation in the indexes. Include the version record in the initial root index. For an empty history, create the decisions and coverage overviews and indexes with the empty status shown below. Create dated folders and topic summaries only when actual records exist. Keep product content limited to decisions and evidence supplied during the authorized work.
+Read [format.md](format.md), repository instructions, and existing documentation. Create the agreed structure at `docs/symbio_spec/`, including `format-version.md` with the latest published version from the installed registry (currently `3.1.1`), folder contracts in the overviews, and accurate navigation in the indexes. Include the version record in the initial root index. For an empty history, create the decisions and coverage overviews and indexes with the empty status shown below. Create dated folders and topic summaries only when actual records exist. Keep product content limited to decisions and evidence supplied during the authorized work.
 
 A human-provided [batch of user scenarios](workflow_user_scenarios.md#13-start-with-a-human-provided-batch) can start product design before every supporting description exists. Organize the journeys, identify shared concepts and missing decisions, then develop supporting descriptions in small coherent increments. Create the optional user scenario folder only when useful user scenarios exist; do not fabricate journeys or approvals. Then use Update as the first concepts and capabilities are developed. Product decisions already supplied by the human can populate the specification within their actual scope.
 
@@ -79,4 +81,5 @@ Add a short Symbiospec section to the repository's existing coding-agent instruc
 
 - Start from the active coding-agent instructions and follow the links to the installed Symbiospec skill and the project specification index. If the repository uses The Rules of the Repo, follow the existing route through the rules list and the Symbiospec configuration and check that the routes to other rules still work.
 - Follow the project index to `decisions/index.md`, `decisions/summaries/index.md`, `coverage/index.md`, and `coverage/summaries/index.md`. Open all four before reporting initialization complete. Check that each empty index explicitly states that there are no records of its kind, following [the example wording](#11-empty-indexes). For populated indexes, verify the links to the existing records, folders or summaries.
+- If Proposals exists, [verify the active proposal index](proposal_resolution.md#2-verify-the-active-index).
 - For a structure-only initialization, verify that there are no new dated decision or examination files, topic summaries, or approved product descriptions. For initialization that includes actual decisions or examinations, check that each record has supporting evidence within the authorized scope.

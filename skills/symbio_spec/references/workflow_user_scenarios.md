@@ -4,11 +4,11 @@
 
 ### 0.1. Purpose
 
-Start with a human-provided batch of user scenarios, or generate proposed user scenarios from existing Symbiospec or existing software. Apply the [shared version check](versioning.md) first and follow [the user scenario format](format-v3.1.0.md#5-user-scenarios). These instructions do not authorize software changes or an audit.
+Start with a human-provided batch of user scenarios, or generate proposed user scenarios from existing Symbiospec or existing software. Apply the [shared version check](versioning.md) first and follow [the user scenario format](format-v3.1.1.md#5-user-scenarios). These instructions do not authorize software changes or an audit.
 
 ## 1. Choose the starting path
 
-Identify the source and the requested product scope before generating or organizing user scenarios. If the project has no Symbiospec folder, use [Initialize Symbiospec](workflow_initialize.md) within the authorized task; an empty structure supplies no approved product meaning. If Symbiospec already exists, preserve the existing descriptions and approvals. Store project documents using [the user scenario format](format-v3.1.0.md#5-user-scenarios) and the template in section 6, maintaining folder overviews and indexes.
+Identify the source and the requested product scope before generating or organizing user scenarios. If the project has no Symbiospec folder, use [Initialize Symbiospec](workflow_initialize.md) within the authorized task; an empty structure supplies no approved product meaning. If Symbiospec already exists, preserve the existing descriptions and approvals. Store project documents using [the user scenario format](format-v3.1.1.md#5-user-scenarios) and the template in section 6, maintaining folder overviews and indexes.
 
 Before generating proposals from any source, apply this scope check: each user scenario describes one person pursuing one specific goal, from a clear starting condition to one observable outcome. Include only the actions necessary to reach that outcome. Put alternative goals, starting conditions and recovery journeys in separate scenario documents. Several necessary actions are allowed; there is no arbitrary click or step limit. Another person's completed work normally belongs in the starting condition or a linked scenario.
 
@@ -58,17 +58,17 @@ Do not infer a missing screen or rule from implementation, or invent product cho
 
 Present the intended journey and specification findings separately. The human may approve the user scenario with gaps still open. Approval establishes the journey, not every missing screen, action or rule. All user scenarios require human approval, regardless of source.
 
-To resolve a gap, propose a concrete action, expected outcome, reason and affected descriptions. Apply existing authorization where the human already supplied the choice. Otherwise obtain a human decision before adopting new product meaning. Update the responsible Glossary, Behaviour or User Interface descriptions and link the user scenario to those descriptions without copying their rules. Follow [decision maintenance](format-v3.1.0.md#42-decisions) for actual decisions, their sources and approval scope. Approval can cover a user scenario and supporting decisions together only when the human actually authorizes that scope.
+To resolve a gap, propose a concrete action, expected outcome, reason and affected descriptions. Apply existing authorization where the human already supplied the choice. Otherwise obtain a human decision before adopting new product meaning. Update the responsible Glossary, Behaviour or User Interface descriptions and link the user scenario to those descriptions without copying their rules. Follow [decision maintenance](format-v3.1.1.md#42-decisions) for actual decisions, their sources and approval scope. Approval can cover a user scenario and supporting decisions together only when the human actually authorizes that scope.
 
 ## 4. Maintain the approved journey
 
-Apply the [approval, revision and retirement rules](format-v3.1.0.md#53-approval-revision-and-retirement). Put a pending revision in Proposed changes with its motivation, affected descriptions and noticed conflicts. Determine whether the human response requests another proposal, rejects a proposal, or authorizes an exact journey change. Record that response using the existing decision procedure before updating the authorized journey and approval link. Keep document status and Human approval consistent, and retain unresolved proposal scope.
+Apply the [approval, revision and retirement rules](format-v3.1.1.md#53-approval-revision-and-retirement). Put a pending revision in Proposed changes with its motivation, affected descriptions and noticed conflicts. Determine whether the human response requests another proposal, rejects a proposal, or authorizes an exact journey change. Record that response using the existing decision procedure before updating the authorized journey and approval link. Keep document status and Human approval consistent, and retain unresolved proposal scope.
 
 For replacement or retirement, update decision links, affected user scenario references and navigation as required by the format. Check that the retained document still makes the last approved journey and the human decision discoverable.
 
 ## 5. Report noticed conflicts
 
-Follow the [review and conflict boundaries](format-v3.1.0.md#54-creation-review-and-conflicts). During rule discussion, report an apparent conflict already noticed by linking the rule and approved user scenario step. State the unresolved choice and leave both approved expectations intact. Report the warning without launching a separate investigation or audit.
+Follow the [review and conflict boundaries](format-v3.1.1.md#54-creation-review-and-conflicts). During rule discussion, report an apparent conflict already noticed by linking the rule and approved user scenario step. State the unresolved choice and leave both approved expectations intact. Report the warning without launching a separate investigation or audit.
 
 ## 6. Project document template
 
@@ -140,4 +140,4 @@ Adapt the following template; replace every instruction in angle brackets with a
 
 See the [fictional design and conflict example](user_scenario_examples.md) for a complete sequence. The example is guidance, not a project decision or execution evidence.
 
-These generation and review instructions do not change stored-document validity or reinterpret existing approvals. Format `3.1.0` remains unchanged; no format publication or project migration is needed under the [versioning rules](versioning.md#1-version-record-and-definitions).
+These generation and review instructions do not change stored-document validity or reinterpret existing approvals. Follow the [format registry](format.md) for the required project version and any migration.
