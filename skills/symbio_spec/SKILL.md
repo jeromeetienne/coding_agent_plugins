@@ -13,6 +13,8 @@ Store project-specific specifications, proposals, decisions, coverage records, a
 
 Read the target repository's instructions and applicable context files first. Follow existing documentation conventions, including `docs_folder_system` when required by the repository. Preserve unrelated documentation and local changes. Installing this skill alone does not initialize product documentation or approve product decisions.
 
+The core workflows use the references in this skill folder. For an optional companion workflow, use the companion's installed instructions if available. See [Related skills and guides](README.md#related-skills-and-guides) for source and installation guidance when a companion is absent.
+
 ## 2. Select the workflow
 
 **Required for normal work: the latest published Symbiospec format in the installed registry (currently `3.1.0`). Migration sources: `3.0.0`, `2.0.0`, `1.0.0` and its unversioned equivalent.** Before normal work, follow the shared [version detection and automatic migration procedure](references/versioning.md). Invoking this skill authorizes documented adoption and forward migration, including for an audit, documentation generation or interface proposal. Automatically migrate older project data before continuing; older-format compatibility does not permit skipping migration. Do not request separate migration approval. Preserve data and approvals, update known repository references, verify replacements, and remove obsolete paths completely; do not leave redirects, compatibility pages or duplicate navigation. Report uneditable external links as limitations. Verify each step and report source and target versions. Explicit instructions forbidding changes override this default: report the conflict and stop dependent work if migration is needed. Malformed, unknown or newer versions, missing reliable conversion paths, and failed or interrupted migrations block normal work. Installation that only copies skill files defers migration until first project use.
@@ -57,7 +59,7 @@ Check affected links, indexes, section ownership, approval references, and the s
 
 ## 6. Write the sub-issues of an implementation
 
-When the approved Symbiospec changes need several implementation changes, write them as one parent issue with one sub-issue for each change, so that the result goes directly into the skill [issue_batch_workflow](../issue_batch_workflow/SKILL.md):
+When the approved Symbiospec changes need several implementation changes, write them as one parent issue with one sub-issue for each change. Use the repository's existing issue workflow for the handoff, including `issue_batch_workflow` when installed and configured.
 
 - Group the sub-issues by area, and order the groups by their dependencies. Write the groups and the order in the parent issue.
 - Ask every open question during the human review of section 4, and write the answers in the parent issue and in the sub-issues. A sub-issue has no open question when the implementation starts.
@@ -65,7 +67,7 @@ When the approved Symbiospec changes need several implementation changes, write 
 
 ## 7. Propose screens and navigation
 
-For user interface structure derived from approved Symbiospec, use the separate [symbio_spec_to_ux draft](../symbio_spec_to_ux/SKILL.md). The draft proposes objects, relationships, calls to action, attributes, screens, and navigation for human review. The draft remains untested on a real project and does not authorize implementation.
+For user interface structure derived from approved Symbiospec, see [Propose user interface structure](references/workflow_user_interface.md).
 
 ## 8. User scenarios
 
